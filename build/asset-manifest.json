@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/newProject/static/css/main.6ccd65a8.css",
-    "main.js": "/newProject/static/js/main.39791536.js",
+    "main.js": "/newProject/static/js/main.0ff303d1.js",
     "static/media/ofppt_lg.png": "/newProject/static/media/ofppt_lg.0335323617fc04cb0add.png",
     "index.html": "/newProject/index.html",
     "main.6ccd65a8.css.map": "/newProject/static/css/main.6ccd65a8.css.map",
-    "main.39791536.js.map": "/newProject/static/js/main.39791536.js.map"
+    "main.0ff303d1.js.map": "/newProject/static/js/main.0ff303d1.js.map"
   },
   "entrypoints": [
     "static/css/main.6ccd65a8.css",
-    "static/js/main.39791536.js"
+    "static/js/main.0ff303d1.js"
   ]
 }

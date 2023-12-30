@@ -47,7 +47,7 @@ export default function ListeArticles() {
         {liststg.map((stg) => (
           <div key={stg.id} className="col-md-4 mb-4">
             <div className="card">
-              <img src={stg.ntic} width={'60px'} height={'60px'} alt="Stagiaire Image" />
+              <img src={stg.ntic} width={'60px'} height={'60px'} alt="Stagiaire" />
               <div className="card-body">
                 <h5 className="card-title">Nom: {stg.nom}</h5>
                 <p className="card-text">Age: {stg.age}</p>

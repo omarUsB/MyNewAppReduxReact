@@ -6,7 +6,7 @@ import "../src/bootstrap-5.3.2-dist/css/bootstrap.min.css";
 export default function DetailArticle() {
   const { id } = useParams();
   const liststg = useSelector((state) => state.liststg); 
-  const stgFind = liststg.find((stg) => stg.id == id);
+  const stgFind = liststg.find((stg) => stg.id === id);
   const style = {
     li: {
       fontSize: '2rem'
