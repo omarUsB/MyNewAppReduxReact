@@ -14,7 +14,11 @@ const Footer = () => {
           <div className="col-md-3 text-light">
             <h4>Links</h4>
             <ul className="list-unstyled">
+
               <li><Link to={'/#/Home'}>Home</Link></li>
+
+              <li><Link to={'/#/Home'}>Home</Link></li>
+
               
               <Link to={'/contact'}>Contact</Link>
             </ul>
