@@ -41,7 +41,7 @@ export default function Users() {
     } else if (reg.pass === reg.passtwo) {
       alert("Enregistrement Bien ");
 
-      alert('tu es registrer bien ')
+      
 
   
       

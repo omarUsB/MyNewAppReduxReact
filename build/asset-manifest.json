@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/MyNewAppReduxReact/static/css/main.6ccd65a8.css",
-    "main.js": "/MyNewAppReduxReact/static/js/main.a820f105.js",
+    "main.js": "/MyNewAppReduxReact/static/js/main.8ad6eea7.js",
     "static/media/ofppt_lg.png": "/MyNewAppReduxReact/static/media/ofppt_lg.0335323617fc04cb0add.png",
     "index.html": "/MyNewAppReduxReact/index.html",
     "main.6ccd65a8.css.map": "/MyNewAppReduxReact/static/css/main.6ccd65a8.css.map",
-    "main.a820f105.js.map": "/MyNewAppReduxReact/static/js/main.a820f105.js.map"
+    "main.8ad6eea7.js.map": "/MyNewAppReduxReact/static/js/main.8ad6eea7.js.map"
   },
   "entrypoints": [
     "static/css/main.6ccd65a8.css",
-    "static/js/main.a820f105.js"
+    "static/js/main.8ad6eea7.js"
   ]
 }
