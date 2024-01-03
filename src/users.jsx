@@ -40,7 +40,7 @@ export default function Users() {
       alert(" tout les champs est obligee");
     } else if (reg.pass === reg.passtwo) {
       alert("Enregistrement Bien ");
-      alert('tu es registrer bien ')
+  
       
       navigate("/login",{state:{reg} });
       
