@@ -15,7 +15,7 @@ const Footer = () => {
             <h4>Links</h4>
             <ul className="list-unstyled">
 
-              <li><Link to={'/#/Home'}>Home</Link></li>
+            
 
               <li><Link to={'/#/Home'}>Home</Link></li>
 
