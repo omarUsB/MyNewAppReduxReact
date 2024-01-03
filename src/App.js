@@ -5,14 +5,22 @@ import storeOm from './store/store';
 import { Provider } from 'react-redux';
 import ListeArticles from "./ListeArticles";
 import DetailArticle from "./DetailArticle";
+import { HashRouter } from "react-router-dom";
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Users from "./users";
+import Contact from "./contact";
+import Login from "./login";
+
 export default function App() {
       
   return (
 <Provider store={storeOm}>
-<BrowserRouter>
+<HashRouter>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Users />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/Home" element={<Home />}></Route>
         <Route
           path="/AjouterArticle"
           element={
@@ -25,7 +33,12 @@ export default function App() {
           path="/DetailArticle/:id"
           element={<DetailArticle  />}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
 </Provider>
   );
 }
+
+
+
+
+

@@ -20,9 +20,12 @@ const reducer = (state = initial, action) => {
         ...state,
         liststg: state.liststg.map((elm) => (elm.id === id ? updstg : elm)),
       };
+   
     default:
       return state;
   }
 };
 
 export default reducer;
+
+  

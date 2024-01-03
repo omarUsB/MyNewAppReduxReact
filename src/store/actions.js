@@ -12,6 +12,7 @@ const addstg = (stg) => ({
     type: 'updating',
     payload: { id, updstg }
   });
+ 
   
   export { addstg, updstg, remove };
   

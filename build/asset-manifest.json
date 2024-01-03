@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/newProject/static/css/main.6ccd65a8.css",
-    "main.js": "/newProject/static/js/main.0ff303d1.js",
-    "static/media/ofppt_lg.png": "/newProject/static/media/ofppt_lg.0335323617fc04cb0add.png",
-    "index.html": "/newProject/index.html",
-    "main.6ccd65a8.css.map": "/newProject/static/css/main.6ccd65a8.css.map",
-    "main.0ff303d1.js.map": "/newProject/static/js/main.0ff303d1.js.map"
+    "main.css": "/MyNewAppReduxReact/static/css/main.6ccd65a8.css",
+    "main.js": "/MyNewAppReduxReact/static/js/main.957556e3.js",
+    "static/media/ofppt_lg.png": "/MyNewAppReduxReact/static/media/ofppt_lg.0335323617fc04cb0add.png",
+    "index.html": "/MyNewAppReduxReact/index.html",
+    "main.6ccd65a8.css.map": "/MyNewAppReduxReact/static/css/main.6ccd65a8.css.map",
+    "main.957556e3.js.map": "/MyNewAppReduxReact/static/js/main.957556e3.js.map"
   },
   "entrypoints": [
     "static/css/main.6ccd65a8.css",
-    "static/js/main.0ff303d1.js"
+    "static/js/main.957556e3.js"
   ]
 }

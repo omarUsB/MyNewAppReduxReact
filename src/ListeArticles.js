@@ -7,7 +7,11 @@ import { remove,updstg } from "./store/actions";
 export default function ListeArticles() {
   const dispatch=useDispatch()
   const liststg=useSelector((state)=> state.liststg)
-  
+  const style = {
+   
+    did:{
+      height:'100vh'
+    }}
 
   const supprimerStg = (id) => {
    dispatch(remove(id))
@@ -39,10 +43,10 @@ export default function ListeArticles() {
   };
   
   return (
-    <div className="container ">
+    <div className="container " style={style.did}>
       <h1>Liste des Stagiaires</h1>
       <h2 className="mb-4 blockquote">Nombre de Stagiaires : {liststg.length}</h2>
-        <Link to="/" className="btn btn-warning text-white text-uppercase  font-weight-bold mt-3 mb-2">Retour</Link>
+        <Link to="/Home" className="btn btn-warning text-white text-uppercase  font-weight-bold mt-3 mb-2">Retour</Link>
       <div className="row">
         {liststg.map((stg) => (
           <div key={stg.id} className="col-md-4 mb-4">

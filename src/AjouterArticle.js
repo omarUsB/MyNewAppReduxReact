@@ -11,8 +11,15 @@ export default function AjouterArticle() {
   const style = {
     Link: {
       textDecoration: 'none',
-      marginLeft: '20px'
+      marginLeft: '20px',
+      
     },
+    did:{
+      height:'100vh'
+    },
+    text:{
+      fontFamily:'Fantasy'
+    }
   };
 
   
@@ -62,37 +69,37 @@ export default function AjouterArticle() {
   }
 
   return (
-    <div className="container">
-      <form className="form-group ">
-        <h1>Ajouter Nouveau Stagiaire :</h1>
+    <div className="container" style={style.did} >
+      <form className="form-group" >
+        <h1 style={style.text}>Ajouter Nouveau Stagiaire :</h1>
         <div className="form-text text-warning">Tout les infos est obligee</div>
 
-        <label className="form-label text-white">ID :</label>
-        <input
+        <label className="form-label text-white" style={style.text}>ID :</label>
+        <input  style={style.text}
           type="number"
           onChange={(e) => handleId(e)}
           value={id}
           className="form-control"
         />
 
-        <label className="form-label text-white mt-3">Nom :</label>
-        <input
+        <label className="form-label text-white mt-5" style={style.text}>Nom :</label>
+        <input style={style.text}
           type="text"
           onChange={(e) => handlenom(e)}
           value={nom}
           className="form-control"
         />
 
-        <label className="form-label text-white mt-3">Âge :</label>
-        <input
+        <label className="form-label text-white mt-5" style={style.text}>Âge :</label>
+        <input style={style.text}
           type="number"
           onChange={(e) => handleage(e)}
           value={age}
           className="form-control"
         />
 
-        <label className="form-label text-white mt-3">Filière :</label>
-        <input
+        <label className="form-label text-white mt-5" style={style.text}>Filière :</label>
+        <input style={style.text}
           onChange={(e) => { handlefilliere(e) }}
           className="form-control"
         />
@@ -100,14 +107,14 @@ export default function AjouterArticle() {
         <button
           type="submit"
           onClick={handleStagiaire}
-          className="btn btn-danger text-uppercase font-weight-bold mt-3"
+          className="btn btn-danger text-uppercase font-weight-bold mt-5"
         >
           Ajouter
         </button>
 
         <Link
-          to="/"
-          className="btn btn-warning text-white text-uppercase font-weight-bold mt-3"
+          to="/Home"
+          className="btn btn-warning text-white text-uppercase font-weight-bold mt-5"
           style={style.Link}
         >
           Retour
