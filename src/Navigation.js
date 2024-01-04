@@ -35,10 +35,10 @@ export default function Navigation() {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg  bg-secondary  border border-danger rounded">
+      <nav className="navbar navbar-expand-lg  bg-secondary  border border-info rounded">
         <div className="container-fluid" style={style.container}>
           <Link to="/" className="navbar-brand text-white fw-bold">
-            {" "}
+           
             <sup>By OmarKhalil</sup>
           </Link>
           <img src={require("./ofppt_lg.png")} width={"80px"} alt="Logo" />
@@ -79,7 +79,7 @@ export default function Navigation() {
       <div className=" p-2 rounded mt-1 mt-2  " style={style.d}>
         <p className="text-dark fw-bolder p-3">
           <h1 className="fst-italic" style={style.textPrimary}>
-            {" "}
+           
             Gestion de Stagiaires Application
           </h1>
 

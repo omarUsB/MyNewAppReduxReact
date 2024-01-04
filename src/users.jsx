@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../src/bootstrap-5.3.2-dist/css/bootstrap.min.css";
-import Login from "./login";
+
 
 export default function Users() {
   const navigate = useNavigate();
@@ -41,13 +41,7 @@ export default function Users() {
     } else if (reg.pass === reg.passtwo) {
       alert("Enregistrement Bien ");
 
-      
-
-  
-      
-
-      navigate("/login",{state:{reg} });
-      
+      navigate("/login", { state: { reg } });
     } else {
       alert("Tu veux donner le même mot de passe");
     }
@@ -64,7 +58,7 @@ export default function Users() {
           <div className="col-md-6" style={style.bla}>
             <div className="card shadow">
               <div className="card-header bg-primary text-white text-center">
-                <h2>Register</h2>
+                <h2>Votre Infos </h2>
               </div>
               <div className="card-body">
                 <form>
@@ -72,10 +66,7 @@ export default function Users() {
                     <label htmlFor="username">Username</label>
                     <input
                       type="text"
-                      id="username"
-                      name="username"
                       className="form-control"
-                      required
                       onChange={handleUsername}
                     />
                   </div>
@@ -83,10 +74,7 @@ export default function Users() {
                     <label htmlFor="email">Email</label>
                     <input
                       type="email"
-                      id="email"
-                      name="email"
                       className="form-control"
-                      required
                       onChange={handleEmail}
                     />
                   </div>
@@ -94,10 +82,7 @@ export default function Users() {
                     <label htmlFor="password">Password</label>
                     <input
                       type="password"
-                      id="password"
-                      name="password"
                       className="form-control"
-                      required
                       onChange={handlePass}
                     />
                   </div>
@@ -105,10 +90,7 @@ export default function Users() {
                     <label htmlFor="confirmPassword">Confirm Password</label>
                     <input
                       type="password"
-                      id="confirmPassword"
-                      name="confirmPassword"
                       className="form-control"
-                      required
                       onChange={handlePasstwo}
                     />
                   </div>

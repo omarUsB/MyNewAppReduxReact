@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../src/bootstrap-5.3.2-dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +36,7 @@ const handlepass=(e)=>{
 const verife=(e)=>{
     e.preventDefault()
     if(username == check.username && pass == check.pass){
-        alert('bienvenue monsiuer Dand Lapplication de gestion des Stagiaires')
+        alert('bienvenue monsiuer Dans Lapplication de gestion des Stagiaires')
         navigate('/Home')
 
     }else{
