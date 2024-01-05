@@ -2,25 +2,64 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
 import { addstg } from "./store/actions";
-import "../src/bootstrap-5.3.2-dist/css/bootstrap.min.css";
+import pc from './pc.jpg'
 
 export default function AjouterArticle() {
   const dispatch=useDispatch()
   const liste = useSelector((state) => state.liststg);
-
   const style = {
     Link: {
       textDecoration: 'none',
       marginLeft: '20px',
-      
     },
-    did:{
-      height:'100vh'
+    body: {
+      backgroundImage: `url(${pc})`,
+      backgroundSize: 'cover',
+      borderRadius:'2pc',
+      height: '100vh',
+      width: '100%',
+      marginLeft: '90px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
-    text:{
-      fontFamily:'Fantasy'
-    }
+    form: {
+      width: "600px",
+      padding: "20px",
+      backgroundColor: "#1a202c",
+      borderRadius: "8px",
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+    },
+    text: {
+      fontFamily: "Fantasy",
+      color: "black",
+    },
+    input: {
+      padding: "10px",
+      marginBottom: "15px",
+      borderRadius: "5px",
+      width: "100%",
+      boxSizing: "border-box",
+    },
+    button: {
+      backgroundColor: "#dc3545",
+      color: "white",
+      padding: "10px",
+      borderRadius: "5px",
+      width: "100%",
+      cursor: "pointer",
+    },
+    backButton: {
+      backgroundColor: "#ffc107",
+      color: "#212529",
+      padding: "10px",
+      borderRadius: "5px",
+      width: "100%",
+      cursor: "pointer",
+      marginTop: "10px",
+    },
   };
+
 
   
 
@@ -69,17 +108,18 @@ export default function AjouterArticle() {
   }
 
   return (
-    <div className="container" style={style.did} >
-      <form className="form-group" >
+    <div className="container" style={style.body} >
+      <form className="form-group" style={style.form} >
         <h1 style={style.text}>Ajouter Nouveau Stagiaire :</h1>
-        <div className="form-text text-warning">Tout les infos est obligee</div>
+        <div className="form-text text-warning" style={style.text}>Tout les infos est obligee</div>
 
         <label className="form-label text-white" style={style.text}>ID :</label>
-        <input  style={style.text}
+        <input  style={style.input}
           type="number"
           onChange={(e) => handleId(e)}
           value={id}
           className="form-control"
+          
         />
 
         <label className="form-label text-white mt-5" style={style.text}>Nom :</label>
@@ -107,15 +147,15 @@ export default function AjouterArticle() {
         <button
           type="submit"
           onClick={handleStagiaire}
-          className="btn btn-danger text-uppercase font-weight-bold mt-5"
-        >
+          className="btn btn-danger text-uppercase font-weight-bold mt-2"
+         style={style.button}>
           Ajouter
         </button>
 
         <Link
           to="/Home"
-          className="btn btn-warning text-white text-uppercase font-weight-bold mt-5"
-          style={style.Link}
+          className="btn btn-warning text-white text-uppercase font-weight-bold "
+          style={style.backButton}
         >
           Retour
         </Link>
