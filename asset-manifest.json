@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/MyNewAppReduxReact/static/css/main.6ccd65a8.css",
-    "main.js": "/MyNewAppReduxReact/static/js/main.fe8c2427.js",
+    "main.js": "/MyNewAppReduxReact/static/js/main.36dc7a3a.js",
+    "static/media/pc.jpg": "/MyNewAppReduxReact/static/media/pc.e6a2dd2986b53cc1d317.jpg",
     "static/media/lol.png": "/MyNewAppReduxReact/static/media/lol.eea8ef7e34ed6bfdacbf.png",
     "static/media/ofppt_lg.png": "/MyNewAppReduxReact/static/media/ofppt_lg.0335323617fc04cb0add.png",
     "static/media/dom.png": "/MyNewAppReduxReact/static/media/dom.48fd97f16bc3a5715a2a.png",
     "index.html": "/MyNewAppReduxReact/index.html",
     "main.6ccd65a8.css.map": "/MyNewAppReduxReact/static/css/main.6ccd65a8.css.map",
-    "main.fe8c2427.js.map": "/MyNewAppReduxReact/static/js/main.fe8c2427.js.map"
+    "main.36dc7a3a.js.map": "/MyNewAppReduxReact/static/js/main.36dc7a3a.js.map"
   },
   "entrypoints": [
     "static/css/main.6ccd65a8.css",
-    "static/js/main.fe8c2427.js"
+    "static/js/main.36dc7a3a.js"
   ]
 }
