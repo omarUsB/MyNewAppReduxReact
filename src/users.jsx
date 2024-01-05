@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../src/bootstrap-5.3.2-dist/css/bootstrap.min.css";
-
+import lol from './lol.png';
 
 export default function Users() {
   const navigate = useNavigate();
@@ -12,15 +11,6 @@ export default function Users() {
     pass: "",
     passtwo: "",
   });
-  const style = {
-    text: {
-      fontFamily: "Fantasy",
-      height: "100vh",
-    },
-    bla: {
-      marginTop: "122px",
-    },
-  };
 
   const handleUsername = (e) => {
     setReg({ ...reg, username: e.target.value });
@@ -37,13 +27,13 @@ export default function Users() {
   const checkingpass = (e) => {
     e.preventDefault();
     if (reg.username === "" || reg.email === "" || reg.pass === "") {
-      alert(" tout les champs est obligee");
+      alert("Tous les champs sont obligatoires");
     } else if (reg.pass === reg.passtwo) {
-      alert("Enregistrement Bien ");
+      alert("Enregistrement réussi");
 
       navigate("/login", { state: { reg } });
     } else {
-      alert("Tu veux donner le même mot de passe");
+      alert("Les mots de passe ne correspondent pas");
     }
   };
 
@@ -52,59 +42,65 @@ export default function Users() {
   };
 
   return (
-    <div>
-      <div className="container " style={style.text}>
-        <div className="row justify-content-center">
-          <div className="col-md-6" style={style.bla}>
-            <div className="card shadow">
-              <div className="card-header bg-primary text-white text-center">
-                <h2>Votre Infos </h2>
-              </div>
-              <div className="card-body">
-                <form>
-                  <div className="form-group">
-                    <label htmlFor="username">Username</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      onChange={handleUsername}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      onChange={handleEmail}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      onChange={handlePass}
-                    />
-                  </div>
-                  <div className="form-group mb-5">
-                    <label htmlFor="confirmPassword">Confirm Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      onChange={handlePasstwo}
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn btn-primary btn-block"
-                    onClick={checkingpass}
-                  >
-                    Register
-                  </button>
-                </form>
-              </div>
+    <div className="min-h-screen flex items-center justify-center bg-cover" style={{ backgroundImage: `url(${lol})` }}>
+      <div className="max-w-md w-full mx-4">
+        <div className="bg-white p-8 border border-gray-300 rounded shadow-md">
+          <h2 className="text-2xl font-bold text-primary mb-8 text-center">
+            Votre Infos
+          </h2>
+          <form>
+            <div className="mb-4">
+              <label htmlFor="username" className="block text-gray-700 mb-2">
+                Username
+              </label>
+              <input
+                type="text"
+                id="username"
+                className="form-input w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                onChange={handleUsername}
+              />
             </div>
-          </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-gray-700 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="form-input w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                onChange={handleEmail}
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="password" className="block text-gray-700 mb-2">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="form-input w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                onChange={handlePass}
+              />
+            </div>
+            <div className="mb-8">
+              <label htmlFor="confirmPassword" className="block text-gray-700 mb-2">
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                id="confirmPassword"
+                className="form-input w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                onChange={handlePasstwo}
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-primary text-white py-2 px-4 w-full rounded"
+              onClick={checkingpass}
+            >
+              Register
+            </button>
+          </form>
         </div>
       </div>
     </div>

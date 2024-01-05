@@ -1,30 +1,24 @@
 import React from 'react';
-import "../src/bootstrap-5.3.2-dist/css/bootstrap.min.css";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="footer rounded bg-dark m-2 border border-info">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6 text-light">
-            <h4>About Us</h4>
+    <footer className="bg-gray-900 text-white p-3 mt-6 border-t border-info">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="col-span-1">
+            <h4 className="text-lg font-bold mb-2">About Us</h4>
             <p>App gestionne de stagiaire.</p>
           </div>
-          <div className="col-md-3 text-light">
-            <h4>Links</h4>
-            <ul className="list-unstyled">
-
-            
-
-              <li><Link to={'/#/Home'}>Home</Link></li>
-
-              
-              <Link to={'/contact'}>Contact</Link>
+          <div className="col-span-1">
+            <h4 className="text-lg font-bold mb-2">Links</h4>
+            <ul className="list-none">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
-          <div className="col-md-3 text-light">
-            <h4>Contact Us</h4>
+          <div className="col-span-1">
+            <h4 className="text-lg font-bold mb-2">Contact Us</h4>
             <address>
               <p>Email: <a href="mailto:info@example.com">SCHOOL212@gmail.com</a></p>
               <p>Phone: +123 456 7890</p>
@@ -32,12 +26,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
-        <div className="container">
-          <div className="text-center text-light">
-            <p>&copy; 2024 Your App. All Rights Reserved.</p>
-          </div>
-        </div>
+      <div className="border-t border-info mt-2 pt-2 text-center">
+        <p>&copy; 2024 Your App. All Rights Reserved.</p>
       </div>
     </footer>
   );

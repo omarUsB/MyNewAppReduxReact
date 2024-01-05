@@ -1,127 +1,94 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../src/bootstrap-5.3.2-dist/css/bootstrap.min.css";
+// import "../src/bootstrap-5.3.2-dist/css/bootstrap.min.css";
 import Footer from "./Footer";
 
+
 export default function Navigation() {
-  const style = {
-    navLink: {
-      color: "white",
-      fontWeight: "bold",
-      border: "2px solid black",
-      padding: "5px 15px",
-      borderRadius: "10px",
-      backgroundColor: "#556B2F",
-      marginLeft: "30px",
-     
-      
-    },
-        
-    container: {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-    },
-    textPrimary: {
-      color: "black",
-    },
-    d: {
-      backgroundColor:'#696969',
-      width:'1300px',
-      marginLeft:'25px',
-     
-    }
-  };
-
+  
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg  bg-secondary  border border-info rounded">
-        <div className="container-fluid" style={style.container}>
-          <Link to="/" className="navbar-brand text-white fw-bold">
-           
-            <sup>By OmarKhalil</sup>
-          </Link>
-          <img src={require("./ofppt_lg.png")} width={"80px"} alt="Logo" />
-          <h2 className="fw-bolder fst-italic text-dark">
-            ISTA Ntic Syba
-          </h2>
+    <div className="bg-gray-100 font-sans min-h-screen">
 
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item " >
-                <Link to="/" className="nav-link" style={style.navLink} >
-                  Acceuil
-                </Link>
-              </li>
-              <li className="nav-item " >
-                <Link 
-                  to="/AjouterArticle"
-                  className="nav-link"
-                  style={style.navLink}
-                >
-                  Ajouter un Stagiaires
-                </Link>
-              </li>
-              <li className="nav-item " >
-                <Link 
-                  to="/ListeArticles"
-                  className="nav-link"
-                  style={style.navLink}
-                >
-                  Liste Des Stagiaires
-                </Link>
-              </li>
-            </ul>
+<style>
+        {`
+          .btn-nav {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(to right, #4a90e2, #7b68ee);
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+          }
+
+          .btn-nav:hover {
+            background: linear-gradient(to right, #4169e1, #6a5acd);
+          }
+        `}
+      </style>
+ 
+      <nav className="bg-gray-800 text-white py-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <Link to="/" className="text-lg font-bold">
+            <sup className="text-yellow-500">By OmarKhalil</sup>
+          </Link>
+          <img src={require("./ofppt_lg.png")} className="w-16" alt="Logo" />
+          <h2 className="font-bold italic">ISTA Ntic Syba</h2>
+          <div className="space-x-4">
+            <Link
+              to="/"
+              className="btn-nav"
+            >
+              Home
+            </Link>
+            <Link
+              to="/AjouterArticle"
+              className="btn-nav"
+            >
+              Add Stagiaire
+            </Link>
+            <Link
+              to="/ListeArticles"
+              className="btn-nav"
+            >
+               List Of stagiaire
+            </Link>
           </div>
         </div>
       </nav>
 
-      <div className=" p-2 rounded mt-1 mt-2  " style={style.d}>
-        <p className="text-dark fw-bolder p-3">
-          <h1 className="fst-italic" style={style.textPrimary}>
-           
-            Gestion de Stagiaires Application
-          </h1>
+      <div className="bg-gray-900 text-white text-center py-10">
+        <h1 className="text-4xl font-italic"> Application De gestion De Stagiaire</h1>
+      </div>
 
-          <p className="text-white">
-            Welcome to our "Gestion de Stagiaires" application. This
-            user-friendly application offers a comprehensive solution for
-            handling various aspects of intern data, facilitating efficient
-            tracking, and organization.
+      <div className="container mx-auto mt-2 w-full p-6 bg-secondary rounded-lg shadow-md  ">
+        <p className="text-gray-800 font-bold">
+          <h1 className="text-3xl font-italic">Welcome!</h1>
+          <p className="text-gray-900">
+            Welcome to our "Intern Management" application. This user-friendly
+            application offers a comprehensive solution for handling various
+            aspects of intern data, facilitating efficient tracking, and
+            organization.
           </p>
 
-          <h3 className="fst-italic" style={style.textPrimary}>Liste des Stagiaires:</h3>
-          <p className="text-white">
+          <h3 className="text-2xl font-italic">Intern List:</h3>
+          <p className="text-gray-900">
             View a detailed list of interns, complete with essential information
             such as name, age, and field of study.
           </p>
 
-          <h3 className="fst-italic "  style={style.textPrimary}>Ajouter un Stagiaire:</h3>
-          <p className="text-white">
+          <h3 className="text-2xl font-italic">Add Intern:</h3>
+          <p className="text-gray-900">
             Easily add new interns to the system by providing their relevant
             details.
           </p>
 
-          <h3 className="fst-italic "  style={style.textPrimary}>Details du Stagiaire:</h3>
-          <p className="text-white">
-            Access in-depth information about each intern, including a detailed
-            profile and associated data.
-          </p>
-
-          <h3 className="fst-italic "  style={style.textPrimary}>Supprimer un Stagiaire:</h3>
-          <p className="text-white">
-            Effortlessly remove interns from the system when necessary.
-          </p>
-
-          <h2 className="fst-italic "  style={style.textPrimary}>"Gestion de Stagiaires"</h2>
-          <p className="text-white">
-            is not just a tool; it's a solution that simplifies the complexities
-            of intern management, allowing you to focus on fostering a positive
-            and productive learning environment.
-          </p>
+          {/* Add more sections as needed */}
         </p>
       </div>
-      <Footer/>
+
+      <Footer className="mt-2" />
     </div>
   );
 }

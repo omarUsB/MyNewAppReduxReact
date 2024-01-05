@@ -1,84 +1,69 @@
-import React, {  useState } from "react";
-import { useLocation } from "react-router-dom";
-import "../src/bootstrap-5.3.2-dist/css/bootstrap.min.css";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import dom from './dom.png';
+
 export default function Login() {
-    const navigate=useNavigate()
-    const [check,setcheck]=useState({
-        username:'',
-        pass:''
-    })
+    const navigate = useNavigate();
+    const [check, setcheck] = useState({
+        username: '',
+        pass: ''
+    });
+
     const location = useLocation();
-    const { reg } = location.state || {}
-    const {username,pass}=reg || {}
+    const { reg } = location.state || {};
+    const { username, pass } = reg || {};
 
-  
-
-  const style = {
-    pic: {
-      backgroundImage:
-        'url("https://imgs.search.brave.com/fymdFKuCw_4xh-9Hf2FLA8gS2hM6ID8P0dVBvXer_Vg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdDIu/ZGVwb3NpdHBob3Rv/cy5jb20vMzU5MTQy/OS83MTY4L2kvNjAw/L2RlcG9zaXRwaG90/b3NfNzE2ODU2ODEt/c3RvY2stcGhvdG8t/cmVnaXN0ZXItbWVt/YmVyc2hpcC1hcHBs/aWNhdGlvbi1yZWdp/c3RyYXRpb24tam9p/bi5qcGc")',
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      height: "100vh",
-    },
-    did: {
-      height: "100vh",
-    },
-  };
- 
-const handleuser=(e)=>{
-        setcheck({...check,username:e.target.value})
-}
-const handlepass=(e)=>{
-        setcheck({...check,pass:e.target.value})
-}
-const verife=(e)=>{
-    e.preventDefault()
-    if(username == check.username && pass == check.pass){
-        alert('bienvenue monsiuer Dans Lapplication de gestion des Stagiaires')
-        navigate('/Home')
-
-    }else{
-        alert('les donnes tu va ecrie et fausse ou tu ne regsitre pas')
+    const handleuser = (e) => {
+        setcheck({ ...check, username: e.target.value });
     }
-}
 
+    const handlepass = (e) => {
+        setcheck({ ...check, pass: e.target.value });
+    }
 
-  return (
-    <div style={style.pic}>
-        <h1 className="container text-Dark">Login In</h1>
-      <form className="container" style={style.did}>
-        <div className="mb-3  ">
-          <label  className="form-label">
-            Username
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            onChange={handleuser}
-          />
-          <div  className="form-text">
-            Tapez votre username
-          </div>
+    const verife = (e) => {
+        e.preventDefault();
+        if (username === check.username && pass === check.pass) {
+            alert('Bienvenue monsieur dans l\'application de gestion des Stagiaires');
+            navigate('/Home');
+        } else {
+            alert('Les données que vous avez saisies sont fausses ou vous n\'êtes pas enregistré.');
+        }
+    }
+
+    return (
+        <div className="bg-cover h-screen" style={{ backgroundImage: `url(${dom})` }}>
+            <h1 className="text-4xl text-dark text-center pt-8">Login In</h1>
+            <form className="container mx-auto max-w-md mt-8 p-8 bg-white rounded shadow-lg">
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                        Username
+                    </label>
+                    <input
+                        type="text"
+                        className="form-input w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                        onChange={handleuser}
+                    />
+                    <p className="text-gray-500 text-xs mt-1">Tapez votre username</p>
+                </div>
+                <div className="mb-4">
+                    <label className="block text-gray-700 text-sm font-bold mb-2">
+                        Password
+                    </label>
+                    <input
+                        type="password"
+                        className="form-input w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-primary"
+                        onChange={handlepass}
+                    />
+                </div>
+                <button
+                    type="submit"
+                    className="bg-primary text-white py-2 px-4 w-full rounded"
+                    onClick={verife}
+                >
+                    Submit
+                </button>
+            </form>
         </div>
-        <div className="  mb-3">
-          <label className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            
-            onChange={handlepass}
-          />
-        </div>
-        
-        <button type="submit" className="btn btn-primary" onClick={verife}>
-          Submit
-        </button>
-
-      </form>
-    </div>
-  );
+    );
 }
